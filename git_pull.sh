@@ -19,7 +19,7 @@ ContentVersion=${ShellDir}/version
 ContentNewTask=${ShellDir}/new_task
 ContentDropTask=${ShellDir}/drop_task
 SendCount=${ShellDir}/send_count
-ScriptsURL=https://github.com.cnpmjs.org/JDHelloWorld/jd_scripts
+ScriptsURL=https://github.com.cnpmjs.org/chinnkarahoi/jd_scripts
 ShellURL=https://github.com.cnpmjs.org/lf2941270/jd-base
 
 
@@ -57,7 +57,7 @@ function Git_PullShellNext {
 ## 克隆 jd_scripts 脚本
 function Git_CloneScripts {
   echo -e "克隆 jd_scripts 脚本\n"
-  git clone -b main ${ScriptsURL} ${ScriptsDir}
+  git clone -b master ${ScriptsURL} ${ScriptsDir}
   ExitStatusScripts=$?
   echo
 }
@@ -69,7 +69,7 @@ function Git_PullScripts {
   cd ${ScriptsDir}
   git fetch --all
   ExitStatusScripts=$?
-  git reset --hard origin/main
+  git reset --hard origin/master
   echo
 }
 
